@@ -321,7 +321,7 @@ public class ELTableTag extends org.displaytag.tags.TableTag
 
     /**
      * @param value EL expression for attribute value
-     * @see org.displaytag.tags.TableTag#setSize(java.lang.String)
+     * org.displaytag.tags.TableTag#setSize(java.lang.String)
      */
     public void setSize(String value)
     {

@@ -33,47 +33,18 @@ import org.displaytag.tags.TableTagParameters;
 
 
 /**
- * <p>
+ * 
  * Allow the author of an included JSP page to reset the content type to something else (like a binary stream), and then
  * write the new info back as the exclusive response, clearing the buffers of all previously added content.
- * </p>
- * <p>
+ *
  * This filter allows TableTag users to perform exports from pages that are run as includes, such as from Struts or a
  * jsp:include. If that is your intention, just add this Filter to your web.xml and map it to the appropriate requests,
  * using something like:
- * </p>
- * 
- * <pre>
- *  &lt;filter>
- *      &lt;filter-name>ResponseOverrideFilter&lt;/filter-name>
- *      &lt;filter-class>org.displaytag.filter.ResponseOverrideFilter&lt;/filter-class>
- *  &lt;/filter>
- *  &lt;filter-mapping>
- *      &lt;filter-name>ResponseOverrideFilter&lt;/filter-name>
- *      &lt;url-pattern>*.do&lt;/url-pattern>
- *  &lt;/filter-mapping>
- *  &lt;filter-mapping>
- *      &lt;filter-name>ResponseOverrideFilter&lt;/filter-name>
- *      &lt;url-pattern>*.jsp&lt;/url-pattern>
- *  &lt;/filter-mapping>
- * </pre>
- * 
- * <p>
+
+ *
  * By default the filter buffers all the export content before writing it out. You can set an optional parameter
- * <code>buffer</code> to <code>false</code> to make the filter write directly to the output stream. This could be
+ * bufferto false to make the filter write directly to the output stream. This could be
  * faster and uses less memory, but the content length will not be set.
- * </p>
- * 
- * <pre>
- *  &lt;filter>
- *      &lt;filter-name>ResponseOverrideFilter&lt;/filter-name>
- *      &lt;filter-class>org.displaytag.filter.ResponseOverrideFilter&lt;/filter-class>
- *      &lt;init-param>
- *          &lt;param-name>buffer&lt;/param-name>
- *          &lt;param-value>false&lt;/param-value>
- *      &lt;/init-param>
- *  &lt;/filter>
- *  </pre>
  * 
  * @author rapruitt
  * @author Fabrizio Giustina

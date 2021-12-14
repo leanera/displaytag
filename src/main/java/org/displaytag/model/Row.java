@@ -26,7 +26,7 @@ import org.displaytag.util.TagConstants;
 /**
  * Holds informations for a table row.
  * @author Fabrizio Giustina
- * @version $Revision: 1081 $ ($Author: fgiust $)
+ * @version $Revision: 1081 $ 
  */
 public class Row
 {
@@ -137,8 +137,8 @@ public class Row
     }
 
     /**
-     * Writes the open &lt;tr> tag.
-     * @return String &lt;tr> tag with the appropriate css class attribute
+     * Writes the open tag.
+     * @return String tag with the appropriate css class attribute
      */
     public String getOpenTag()
     {
@@ -188,10 +188,6 @@ public class Row
         return tag.toString();
     }
 
-    /**
-     * writes the &lt;/tr> tag.
-     * @return String &lt;/tr> tag
-     */
     public String getCloseTag()
     {
         return TagConstants.TAG_TR_CLOSE;

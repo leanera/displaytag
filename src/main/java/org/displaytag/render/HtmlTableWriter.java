@@ -253,7 +253,7 @@ public class HtmlTableWriter extends TableWriterAdapter
 
     /**
      * Writes an HTML table's footer to a JSP page; HTML requires tfoot to appear before tbody.
-     * @see org.displaytag.render.TableWriterTemplate#writeFooter(org.displaytag.model.TableModel)
+     * org.displaytag.render.TableWriterTemplate#writeFooter(org.displaytag.model.TableModel)
      */
     protected void writePreBodyFooter(TableModel model)
     {
@@ -383,7 +383,7 @@ public class HtmlTableWriter extends TableWriterAdapter
 
     /**
      * Writes a HTML table column value to a JSP page.
-     * @see org.displaytag.render.TableWriterTemplate#writeColumnValue(java.lang.String,org.displaytag.model.Column)
+     * org.displaytag.render.TableWriterTemplate#writeColumnValue(java.lang.String,org.displaytag.model.Column)
      */
     protected void writeColumnValue(Object value, Column column)
     {
@@ -678,8 +678,8 @@ public class HtmlTableWriter extends TableWriterAdapter
 
     /**
      * create the open tag containing all the attributes.
-     * @return open tag string: <code>%lt;table attribute="value" ... ></code>
-     */
+     * @return open tag string: table attribute="value" 
+     *      */
     public String getOpenTag()
     {
 

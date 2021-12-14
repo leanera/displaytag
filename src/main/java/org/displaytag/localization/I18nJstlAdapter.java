@@ -29,25 +29,15 @@ import org.displaytag.Messages;
 
 
 /**
- * JSTL implementation of a resource provider and locale resolver. It will make the <code>titleKey</code> attribute of
- * column tag works the same as fmt:message's <code>key property</code>. This tag must be the descendant of a
- * <code>fmt:bundle</code> tag in order to use the titleKey. This is just a shortcut, which makes
+ * JSTL implementation of a resource provider and locale resolver. It will make the titleKey attribute of
+ * column tag works the same as fmt:message's key property. This tag must be the descendant of a
+ * fmt:bundle tag in order to use the titleKey. This is just a shortcut, which makes
  * 
- * <pre>
- * &lt;display:column titleKey="bar"/>
- * </pre>
  * 
  * behave the same as
  * 
- * <pre>
- * &lt;c:set var="foo">
- *   &lt;fmt:message key="bar"/>
- * &lt;/c:set>
- * &lt;display:column title="${foo}"/>
- * </pre>
- * 
- * If you don't define either <code>titleKey</code> or <code>titleKey</code> property on your column, first the tag
- * will attempt to look up the <code>property</code> property in your ResourceBundle. Failing that, it will fall back
+ * If you don't define either titleKey or titleKey property on your column, first the tag
+ * will attempt to look up the property property in your ResourceBundle. Failing that, it will fall back
  * to the parent class's behavior of just using the property name.
  * @author Fabrizio Giustina
  * @version $Revision: 1081 $ ($Author: fgiust $)
